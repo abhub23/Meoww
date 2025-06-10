@@ -15,8 +15,8 @@ const ErrorPage = () => {
       className={`${Bricolage} flex h-screen flex-col items-center justify-center bg-white font-semibold dark:bg-black`}
     >
       <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 100, filter: "blur(8px)" }}
+        animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
         transition={{ duration: 0.3, ease: 'easeOut' }}
         className="flex flex-col items-center justify-center"
       >
