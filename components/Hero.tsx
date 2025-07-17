@@ -1,7 +1,7 @@
 'use client';
 
 import { useCatname } from '@/store/store';
-import React, { JSX, useEffect, useState } from 'react';
+import React, { FC, JSX, useEffect, useState } from 'react';
 import { RainbowButton } from './magicui/rainbow-button';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
@@ -14,7 +14,7 @@ type InitialUrlType = {
   initialURL: string;
 };
 
-const Hero: React.FC<InitialUrlType> = ({ initialURL }): JSX.Element => {
+const Hero: FC<InitialUrlType> = ({ initialURL }): JSX.Element => {
   const { catName, setCatName } = useCatname();
   const [catImgURL, setCatImgURL] = useState(initialURL);
 
@@ -37,7 +37,8 @@ const Hero: React.FC<InitialUrlType> = ({ initialURL }): JSX.Element => {
   const width = useWindowWidth();
 
   const handleVoice = () => {
-    router.push(`/voice?breed=${catName}`);
+    const trimmedName = catName.split(' ').join('')
+    router.push(`/voice?breed=${trimmedName}`);
   };
 
   useEffect(() => {
