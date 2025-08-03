@@ -38,7 +38,7 @@ const Hero: FC<InitialUrlType> = ({ initialURL }): JSX.Element => {
   const width = useWindowWidth();
 
   const handleVoice = () => {
-    const trimmedName = catName.split(' ').join('')
+    const trimmedName = catName.split(' ').join('');
     router.push(`/voice?breed=${trimmedName}`);
   };
 
