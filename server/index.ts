@@ -14,7 +14,7 @@ const app = new Hono()
 app.use(
   '*',
   cors({
-    origin: '*',
+    origin: ['https://meoww.abdullahtech.dev', '*'],
   })
 );
 
@@ -35,7 +35,6 @@ cron.schedule('* * * * *', async () => {
     });
 
     caturl = response.data[0].url;
-    console.log(caturl);
   } catch (error) {
     console.error('Error occured in Api call: ', error);
   }
