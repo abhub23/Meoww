@@ -1,16 +1,16 @@
 type VoiceTypes = {
-  comeHere: string;
-  no: string;
-  getDown: string;
-  goodKitty: string;
-  stay: string;
-  wantFood: string;
-  goAway: string;
-  whatsThat: string;
-  stopIt: string;
-  comeOn: string;
-  pssPss: string;
-  clickTongue: string;
+  "Come Here": string;
+  "No": string;
+  "Get Down": string;
+  "Good Kitty": string;
+  "Stay": string;
+  "Want Food?": string;
+  "Go Away": string;
+  "What's That?": string;
+  "Stop It": string;
+  "Come On": string;
+  "Pss-Pss-Pss": string;
+  "Tsk-Tsk": string;
 };
 
 export type CatPropTypes = {
@@ -19,181 +19,181 @@ export type CatPropTypes = {
 };
 
 export const IndianDomesticShorthair: CatPropTypes = {
-  name: 'Indian Domestic Shorthair',
+  name: "Indian Domestic Shorthair",
   voice: {
-    comeHere: 'Come here',
-    no: 'No!',
-    getDown: 'Get down',
-    goodKitty: 'Good kitty',
-    stay: 'Stay',
-    wantFood: 'Want food?',
-    goAway: 'Go away',
-    whatsThat: 'What’s that?',
-    stopIt: 'Stop it',
-    comeOn: 'Come on',
-    pssPss: 'Pss-pss-pss',
-    clickTongue: 'Tsk-tsk',
+    "Come Here": "Come Here",
+    "No": "No!",
+    "Get Down": "Get Down",
+    "Good Kitty": "Good Kitty",
+    "Stay": "Stay",
+    "Want Food?": "Want Food?",
+    "Go Away": "Go Away",
+    "What's That?": "What’s That?",
+    "Stop It": "Stop It",
+    "Come On": "Come On",
+    "Pss-Pss-Pss": "Pss-Pss-Pss",
+    "Tsk-Tsk": "Tsk-Tsk",
   },
 };
 
 export const Persian: CatPropTypes = {
-  name: 'Persian',
+  name: "Persian",
   voice: {
-    comeHere: '/meow.wav',
-    no: 'No!',
-    getDown: 'Get down',
-    goodKitty: 'Good kitty',
-    stay: 'Stay',
-    wantFood: 'Want food?',
-    goAway: 'Go away',
-    whatsThat: 'What’s that?',
-    stopIt: 'Stop it',
-    comeOn: 'Come on',
-    pssPss: 'Pss-pss-pss',
-    clickTongue: 'Tsk-tsk',
+    "Come Here": "/meow.wav",
+    "No": "No!",
+    "Get Down": "Get Down",
+    "Good Kitty": "Good Kitty",
+    "Stay": "Stay",
+    "Want Food?": "Want Food?",
+    "Go Away": "Go Away",
+    "What's That?": "What’s That?",
+    "Stop It": "Stop It",
+    "Come On": "Come On",
+    "Pss-Pss-Pss": "Pss-Pss-Pss",
+    "Tsk-Tsk": "Tsk-Tsk",
   },
 };
 
 export const Siamese: CatPropTypes = {
-  name: 'Siamese',
+  name: "Siamese",
   voice: {
-    comeHere: 'Come here',
-    no: 'No!',
-    getDown: 'Get down',
-    goodKitty: 'Good kitty',
-    stay: 'Stay',
-    wantFood: 'Want food?',
-    goAway: 'Go away',
-    whatsThat: 'What’s that?',
-    stopIt: 'Stop it',
-    comeOn: 'Come on',
-    pssPss: 'Pss-pss-pss',
-    clickTongue: 'Tsk-tsk',
+    "Come Here": "Come Here",
+    "No": "No!",
+    "Get Down": "Get Down",
+    "Good Kitty": "Good Kitty",
+    "Stay": "Stay",
+    "Want Food?": "Want Food?",
+    "Go Away": "Go Away",
+    "What's That?": "What’s That?",
+    "Stop It": "Stop It",
+    "Come On": "Come On",
+    "Pss-Pss-Pss": "Pss-Pss-Pss",
+    "Tsk-Tsk": "Tsk-Tsk",
   },
 };
 
 export const Bengal: CatPropTypes = {
-  name: 'Bengal',
+  name: "Bengal",
   voice: {
-    comeHere: 'Come here',
-    no: 'No!',
-    getDown: 'Get down',
-    goodKitty: 'Good kitty',
-    stay: 'Stay',
-    wantFood: 'Want food?',
-    goAway: 'Go away',
-    whatsThat: 'What’s that?',
-    stopIt: 'Stop it',
-    comeOn: 'Come on',
-    pssPss: 'Pss-pss-pss',
-    clickTongue: 'Tsk-tsk',
+    "Come Here": "Come Here",
+    "No": "No!",
+    "Get Down": "Get Down",
+    "Good Kitty": "Good Kitty",
+    "Stay": "Stay",
+    "Want Food?": "Want Food?",
+    "Go Away": "Go Away",
+    "What's That?": "What’s That?",
+    "Stop It": "Stop It",
+    "Come On": "Come On",
+    "Pss-Pss-Pss": "Pss-Pss-Pss",
+    "Tsk-Tsk": "Tsk-Tsk",
   },
 };
 
 export const Birman: CatPropTypes = {
-  name: 'Birman',
+  name: "Birman",
   voice: {
-    comeHere: 'Come here',
-    no: 'No!',
-    getDown: 'Get down',
-    goodKitty: 'Good kitty',
-    stay: 'Stay',
-    wantFood: 'Want food?',
-    goAway: 'Go away',
-    whatsThat: 'What’s that?',
-    stopIt: 'Stop it',
-    comeOn: 'Come on',
-    pssPss: 'Pss-pss-pss',
-    clickTongue: 'Tsk-tsk',
+    "Come Here": "Come Here",
+    "No": "No!",
+    "Get Down": "Get Down",
+    "Good Kitty": "Good Kitty",
+    "Stay": "Stay",
+    "Want Food?": "Want Food?",
+    "Go Away": "Go Away",
+    "What's That?": "What’s That?",
+    "Stop It": "Stop It",
+    "Come On": "Come On",
+    "Pss-Pss-Pss": "Pss-Pss-Pss",
+    "Tsk-Tsk": "Tsk-Tsk",
   },
 };
 
 export const MaineCoon: CatPropTypes = {
-  name: 'Maine Coon',
+  name: "Maine Coon",
   voice: {
-    comeHere: 'Come here',
-    no: 'No!',
-    getDown: 'Get down',
-    goodKitty: 'Good kitty',
-    stay: 'Stay',
-    wantFood: 'Want food?',
-    goAway: 'Go away',
-    whatsThat: 'What’s that?',
-    stopIt: 'Stop it',
-    comeOn: 'Come on',
-    pssPss: 'Pss-pss-pss',
-    clickTongue: 'Tsk-tsk',
+    "Come Here": "Come Here",
+    "No": "No!",
+    "Get Down": "Get Down",
+    "Good Kitty": "Good Kitty",
+    "Stay": "Stay",
+    "Want Food?": "Want Food?",
+    "Go Away": "Go Away",
+    "What's That?": "What’s That?",
+    "Stop It": "Stop It",
+    "Come On": "Come On",
+    "Pss-Pss-Pss": "Pss-Pss-Pss",
+    "Tsk-Tsk": "Tsk-Tsk",
   },
 };
 
 export const BritishShorthair: CatPropTypes = {
-  name: 'British Shorthair',
+  name: "British Shorthair",
   voice: {
-    comeHere: 'Come here',
-    no: 'No!',
-    getDown: 'Get down',
-    goodKitty: 'Good kitty',
-    stay: 'Stay',
-    wantFood: 'Want food?',
-    goAway: 'Go away',
-    whatsThat: 'What’s that?',
-    stopIt: 'Stop it',
-    comeOn: 'Come on',
-    pssPss: 'Pss-pss-pss',
-    clickTongue: 'Tsk-tsk',
+    "Come Here": "Come Here",
+    "No": "No!",
+    "Get Down": "Get Down",
+    "Good Kitty": "Good Kitty",
+    "Stay": "Stay",
+    "Want Food?": "Want Food?",
+    "Go Away": "Go Away",
+    "What's That?": "What’s That?",
+    "Stop It": "Stop It",
+    "Come On": "Come On",
+    "Pss-Pss-Pss": "Pss-Pss-Pss",
+    "Tsk-Tsk": "Tsk-Tsk",
   },
 };
 
 export const ExoticShorthair: CatPropTypes = {
-  name: 'Exotic Shorthair',
+  name: "Exotic Shorthair",
   voice: {
-    comeHere: 'Come here',
-    no: 'No!',
-    getDown: 'Get down',
-    goodKitty: 'Good kitty',
-    stay: 'Stay',
-    wantFood: 'Want food?',
-    goAway: 'Go away',
-    whatsThat: 'What’s that?',
-    stopIt: 'Stop it',
-    comeOn: 'Come on',
-    pssPss: 'Pss-pss-pss',
-    clickTongue: 'Tsk-tsk',
+    "Come Here": "Come Here",
+    "No": "No!",
+    "Get Down": "Get Down",
+    "Good Kitty": "Good Kitty",
+    "Stay": "Stay",
+    "Want Food?": "Want Food?",
+    "Go Away": "Go Away",
+    "What's That?": "What’s That?",
+    "Stop It": "Stop It",
+    "Come On": "Come On",
+    "Pss-Pss-Pss": "Pss-Pss-Pss",
+    "Tsk-Tsk": "Tsk-Tsk",
   },
 };
 
 export const ScottishFold: CatPropTypes = {
-  name: 'Scottish Fold',
+  name: "Scottish Fold",
   voice: {
-    comeHere: 'Come here',
-    no: 'No!',
-    getDown: 'Get down',
-    goodKitty: 'Good kitty',
-    stay: 'Stay',
-    wantFood: 'Want food?',
-    goAway: 'Go away',
-    whatsThat: 'What’s that?',
-    stopIt: 'Stop it',
-    comeOn: 'Come on',
-    pssPss: 'Pss-pss-pss',
-    clickTongue: 'Tsk-tsk',
+    "Come Here": "Come Here",
+    "No": "No!",
+    "Get Down": "Get Down",
+    "Good Kitty": "Good Kitty",
+    "Stay": "Stay",
+    "Want Food?": "Want Food?",
+    "Go Away": "Go Away",
+    "What's That?": "What’s That?",
+    "Stop It": "Stop It",
+    "Come On": "Come On",
+    "Pss-Pss-Pss": "Pss-Pss-Pss",
+    "Tsk-Tsk": "Tsk-Tsk",
   },
 };
 
 export const OrientalShorthair: CatPropTypes = {
-  name: 'Oriental Shorthair',
+  name: "Oriental Shorthair",
   voice: {
-    comeHere: 'Come here',
-    no: 'No!',
-    getDown: 'Get down',
-    goodKitty: 'Good kitty',
-    stay: 'Stay',
-    wantFood: 'Want food?',
-    goAway: 'Go away',
-    whatsThat: 'What’s that?',
-    stopIt: 'Stop it',
-    comeOn: 'Come on',
-    pssPss: 'Pss-pss-pss',
-    clickTongue: 'Tsk-tsk',
+    "Come Here": "Come Here",
+    "No": "No!",
+    "Get Down": "Get Down",
+    "Good Kitty": "Good Kitty",
+    "Stay": "Stay",
+    "Want Food?": "Want Food?",
+    "Go Away": "Go Away",
+    "What's That?": "What’s That?",
+    "Stop It": "Stop It",
+    "Come On": "Come On",
+    "Pss-Pss-Pss": "Pss-Pss-Pss",
+    "Tsk-Tsk": "Tsk-Tsk",
   },
 };
