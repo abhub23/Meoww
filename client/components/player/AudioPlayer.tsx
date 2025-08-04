@@ -165,7 +165,7 @@ export default function AudioPlayer({
           onClick={togglePlay}
           size="icon"
           disabled={isLoading}
-          className="h-10 w-10 rounded-full border-0 bg-red-200 text-white shadow-lg transition-all hover:scale-105 hover:bg-red-300 disabled:bg-blue-300 disabled:hover:scale-100"
+          className="h-10 w-10 rounded-full border-0 bg-red-200 text-white shadow-lg transition-all hover:scale-105 hover:bg-red-300 disabled:bg-red-200 disabled:hover:scale-100"
         >
           {isLoading ? (
             <div className="h-6 w-6 animate-spin rounded-full border-2 border-white border-t-transparent" />

@@ -3,12 +3,15 @@
 import { useSearchParams } from 'next/navigation';
 import { useCat } from '@/store/store';
 import { useEffect } from 'react';
-import AudioPlayer from '@/components/player/AudioPlayer';
+import { useTheme } from 'next-themes';
+import { AudioPlayerCard } from '@/components/player/AudioPlayerCard';
+import { Bricolage } from '@/utils/fonts';
 
 const Voice: React.FC = () => {
   const searchParams = useSearchParams();
   const Breed = searchParams.get('breed');
   const { cat, setCat } = useCat();
+  const { theme } = useTheme()
 
   useEffect(() => {
     if (!Breed) {
@@ -28,14 +31,30 @@ const Voice: React.FC = () => {
   }, [Breed]);
 
   return (
-    <div className=''>
-      <div className='grid gap-y-12 mt-12 lg:grid-cols-3 '>
-        {Object.values(cat?.voice ?? {}).map((ele, idx) => (
-      <AudioPlayer key={idx} src={ele as string}  title={Object.keys(cat?.voice ?? {})[idx]}/>
-    ))}
-      </div>
-    </div>
-  );
-};
 
+
+    <div className={`min-h-screen w-full relative bg-black ${Bricolage} `}>
+      {/* Prismatic Aurora Burst - Multi-layered Gradient */}
+      <div
+        className="absolute inset-0 z-0"
+
+        style={{
+          background: ` ${theme === 'dark' ? `radial-gradient(ellipse 120% 80% at 70% 20%, rgba(255, 20, 147, 0.15), transparent 50%),
+          radial-gradient(ellipse 100% 60% at 30% 10%, rgba(0, 255, 255, 0.12), transparent 60%),
+          radial-gradient(ellipse 90% 70% at 50% 0%, rgba(138, 43, 226, 0.18), transparent 65%),
+          radial-gradient(ellipse 110% 50% at 80% 30%, rgba(255, 215, 0, 0.08), transparent 40%),
+          #000000`: `
+
+        radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #ec4899 100%)
+
+      `}
+        `,
+        }}
+      />
+      <AudioPlayerCard src={Object.values(cat?.voice ?? {})} title={Object.keys(cat?.voice ?? {})} />
+
+    </div>
+
+  )
+}
 export default Voice;
