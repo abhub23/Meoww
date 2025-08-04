@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bun Monorepo — Client & Server
 
-## Getting Started
+This is a simple monorepo setup using **Bun workspaces** with a `client/` and `server/`. It allows you to run both together using a single `bun run dev`.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 📁 Folder Structure
+
+```
+.
+├── bunfig.toml
+├── package.json
+├── client/
+│   └── package.json
+├── server/
+│   └── package.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠 Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. Root `package.json`
 
-## Learn More
+```json
+{
+  "private": true,
+  "workspaces": ["client", "server"],
+  "scripts": {
+    "dev": "bun run dev --filter=client & bun run dev --filter=server"
+  }
+}
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Root `bunfig.toml`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```toml
+[install]
+workspaceRoot = true
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+> This tells Bun that this is the root of your workspace and allows proper linking and hoisting.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📦 Install Dependencies
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+From the root folder, run:
+
+```bash
+bun install
+```
+
+This installs all dependencies and links the workspaces correctly.
+
+---
+
+## 🚀 Start Development Servers
+
+To run both the client and server concurrently:
+
+```bash
+bun run dev
+```
+
+This command will:
+- Run `client`'s dev script (`bun run dev` inside `client/`)
+- Run `server`'s dev script (`bun run dev` inside `server/`)
+- Use Bun’s `--filter` flag to target specific workspaces
+
+---
+
+## 🔧 Example Workspace Setup
+
+### `client/package.json`
+
+```json
+{
+  "name": "client",
+  "scripts": {
+    "dev": "bun --hot src/index.ts"
+  }
+}
+```
+
+> Replace `src/index.ts` with your actual entry file (e.g., if using React or Vite, change accordingly).
+
+---
+
+### `server/package.json`
+
+```json
+{
+  "name": "server",
+  "scripts": {
+    "dev": "bun src/server.ts"
+  }
+}
+```
+
+> Replace `src/server.ts` with your actual backend entry point (e.g., Express, Hono, Elysia, etc.)
+
+---
+
+## ✅ Notes
+
+- You only need to run `bun install` once at the root.
+- Bun will create a single `bun.lockb` and manage dependencies across workspaces.
+- Workspaces can depend on each other, and Bun will link them automatically.
+- You can use `--filter=client` or `--filter=server` to run tasks in specific workspaces.
+
+---
