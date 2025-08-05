@@ -1,15 +1,17 @@
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
-import axios from 'axios';
+import { SafeRender } from '@/components/ToggleTheme';
 
 export default async function Home() {
-  const res = await axios.get('http://192.168.0.100:8090/getimage');
-  const data: string = await res.data.caturl;
+
   return (
-    <>
-      <Hero initialURL={data} />
-      <Footer />
-    </>
+    <div>
+      <SafeRender>
+        <Hero />
+        <Footer />
+      </SafeRender>
+
+    </div>
   );
 }
 

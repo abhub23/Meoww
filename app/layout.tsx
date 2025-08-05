@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Bricolage } from '@/utils/fonts';
 import { ThemeProvider } from 'next-themes';
+import { QueryProvider } from '@/lib/QueryProvider';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -25,7 +26,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <QueryProvider>
+            {children}
+          </QueryProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -33,7 +33,7 @@ const Voice: React.FC = () => {
   return (
 
 
-    <div className={`min-h-screen w-full relative bg-black ${Bricolage} `}>
+    <div className={`lg:min-h-screen w-full relative bg-neutral-50 dark:bg-neutral-900`}>
       {/* Prismatic Aurora Burst - Multi-layered Gradient */}
       <div
         className="absolute inset-0 z-0"
@@ -44,10 +44,8 @@ const Voice: React.FC = () => {
           radial-gradient(ellipse 90% 70% at 50% 0%, rgba(138, 43, 226, 0.18), transparent 65%),
           radial-gradient(ellipse 110% 50% at 80% 30%, rgba(255, 215, 0, 0.08), transparent 40%),
           #000000`: `
-
-        radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #ec4899 100%)
-
-      `}
+        radial-gradient(circle at 30% 70%, rgba(173, 216, 230, 0.35), transparent 60%),
+        radial-gradient(circle at 70% 30%, rgba(255, 182, 193, 0.4), transparent 60%)`}
         `,
         }}
       />
@@ -58,3 +56,4 @@ const Voice: React.FC = () => {
   )
 }
 export default Voice;
+

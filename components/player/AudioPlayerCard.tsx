@@ -75,13 +75,13 @@ export const AudioPlayerCard: FC<AudioPlayerProps> = ({ src, title }) => {
 
   return (
     <div className="w-full max-w-4xl mx-auto p-4">
-      {/* Controls */}
-      <div className="mb-3 flex items-center justify-between">
+      
+      <div className="mb-3 flex items-center justify-center">
         <div className="flex gap-2 items-center relative">
           <Button
             variant="player-ghost"
             size="icon"
-            className={`w-10 h-10 ${showVolumeBar ? 'text-music-primary' : 'text-muted-foreground'}`}
+            className={`w-10 h-10 cursor-pointer ${showVolumeBar ? 'text-music-primary' : 'text-muted-foreground'}`}
             onClick={() => setShowVolumeBar(!showVolumeBar)}
           >
             <Volume2 className="w-5 h-5" />
@@ -89,16 +89,15 @@ export const AudioPlayerCard: FC<AudioPlayerProps> = ({ src, title }) => {
           <Button
             variant="player-ghost"
             size="icon"
-            className={`w-10 h-10 ${isLoop ? 'text-music-primary' : 'text-muted-foreground'}`}
+            className={`w-10 h-10 cursor-pointer ${isLoop ? 'text-music-primary' : 'text-muted-foreground'}`}
             onClick={() => setIsLoop(!isLoop)}
           >
             <Repeat className="w-5 h-5" />
           </Button>
 
           {showVolumeBar && (
-            <div className="absolute top-10 right-0 bg-black/40 backdrop-blur-md border border-white/10 rounded-lg p-3 w-40">
+            <div className="absolute top-8 z-10 right-0 bg-black/5 backdrop-blur-md border border-white/10 rounded-lg p-4 w-40">
               <div className="flex items-center gap-2">
-                <Volume2 className="w-4 h-4 text-muted-foreground" />
                 <Slider
                   value={volume}
                   onValueChange={setVolume}
@@ -106,19 +105,18 @@ export const AudioPlayerCard: FC<AudioPlayerProps> = ({ src, title }) => {
                   step={1}
                   className="flex-1"
                 />
-                <span className="text-xs text-muted-foreground w-8">{volume[0]}%</span>
               </div>
             </div>
           )}
         </div>
       </div>
 
-      <Card className="bg-black/5 backdrop-blur-2xl border-white/10 overflow-hidden">
+      <Card className="bg-black/5 backdrop-blur-xl mt-8 border-white/10 overflow-hidden">
         <div className="p-2 space-y-1">
           {src.map((_, idx) => (
             <div
               key={idx}
-              className="flex items-center justify-between px-4 py-1.5 rounded-lg hover:bg-white/5 transition-all duration-300 cursor-pointer"
+              className="flex items-center justify-between px-4 py-[5px] rounded-lg hover:bg-white/5 transition-all duration-300 cursor-pointer"
               onClick={() => playTrack(idx)}
             >
               <div className="flex items-center gap-3">
