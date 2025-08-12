@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import type { CatPropTypes } from '@/client/components/catData';
+import type { CatPropTypes } from '@/components/catData';
 
 type Cattype = {
   catName: string;
