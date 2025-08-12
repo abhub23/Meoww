@@ -11,10 +11,7 @@ interface AudioPlayerProps {
   title?: string;
 }
 
-export default function AudioPlayer({
-  src,
-  title = 'Audio Track',
-}: AudioPlayerProps) {
+export default function AudioPlayer({ src, title = 'Audio Track' }: AudioPlayerProps) {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLooping, setIsLooping] = useState(false);
@@ -124,7 +121,7 @@ export default function AudioPlayer({
 
   return (
     <Card
-      className={`mx-auto w-full lg:max-w-[360px] border-0 bg-gradient-to-br from-slate-50 to-slate-100 p-6 shadow-lg dark:from-slate-900 dark:to-slate-800`}
+      className={`mx-auto w-full border-0 bg-gradient-to-br from-slate-50 to-slate-100 p-6 shadow-lg lg:max-w-[360px] dark:from-slate-900 dark:to-slate-800`}
     >
       <audio ref={audioRef} src={src} preload="metadata" />
 
@@ -134,18 +131,17 @@ export default function AudioPlayer({
         </h4>
       </div>
 
-        <Slider
-          value={[currentTime]}
-          max={duration || 100}
-          step={1}
-          onValueChange={handleSeek}
-          className="w-full"
-        />
-        <div className="mt-2 flex justify-between text-xs text-slate-500 dark:text-slate-400">
-          <span>{formatTime(currentTime)}</span>
-          <span>{formatTime(duration)}</span>
-        </div>
-      
+      <Slider
+        value={[currentTime]}
+        max={duration || 100}
+        step={1}
+        onValueChange={handleSeek}
+        className="w-full"
+      />
+      <div className="mt-2 flex justify-between text-xs text-slate-500 dark:text-slate-400">
+        <span>{formatTime(currentTime)}</span>
+        <span>{formatTime(duration)}</span>
+      </div>
 
       <div className="mb-4 flex items-center justify-center gap-4">
         <Button
@@ -170,9 +166,9 @@ export default function AudioPlayer({
           {isLoading ? (
             <div className="h-6 w-6 animate-spin rounded-full border-2 border-white border-t-transparent" />
           ) : isPlaying ? (
-            <Pause className="lg:h-5 lg:w-5 fill-current" />
+            <Pause className="fill-current lg:h-5 lg:w-5" />
           ) : (
-            <Play className="ml-[2px] lg:h-5 lg:w-5 fill-current" />
+            <Play className="ml-[2px] fill-current lg:h-5 lg:w-5" />
           )}
         </Button>
 

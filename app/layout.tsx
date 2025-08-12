@@ -57,7 +57,6 @@ export const metadata: Metadata = {
   category: 'Animal Audios',
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -72,9 +71,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <QueryProvider>
-            {children}
-          </QueryProvider>
+          <QueryProvider>{children}</QueryProvider>
         </ThemeProvider>
       </body>
     </html>

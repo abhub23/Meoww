@@ -1,10 +1,10 @@
 'use client';
 
-import { useRef, useState, useEffect, type FC } from "react";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Play, Pause, Repeat, Volume2 } from "lucide-react";
-import { Slider } from "@/components/ui/slider";
+import { useRef, useState, useEffect, type FC } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { Play, Pause, Repeat, Volume2 } from 'lucide-react';
+import { Slider } from '@/components/ui/slider';
 
 interface AudioPlayerProps {
   src: string[];
@@ -12,7 +12,6 @@ interface AudioPlayerProps {
 }
 
 export const AudioPlayerCard: FC<AudioPlayerProps> = ({ src, title }) => {
-
   const [currentTrack, setCurrentTrack] = useState<number | null>(null);
   const [isLoop, setIsLoop] = useState(false);
   const [showVolumeBar, setShowVolumeBar] = useState(false);
@@ -23,7 +22,7 @@ export const AudioPlayerCard: FC<AudioPlayerProps> = ({ src, title }) => {
   // Update volume
   useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.volume = volume[0] as number / 100;
+      audioRef.current.volume = (volume[0] as number) / 100;
     }
   }, [volume]);
 
@@ -68,35 +67,34 @@ export const AudioPlayerCard: FC<AudioPlayerProps> = ({ src, title }) => {
     } else {
       setCurrentTrack(index);
 
-      audio.src = src[index] as string
+      audio.src = src[index] as string;
       await audio.play();
     }
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-4">
-      
+    <div className="mx-auto w-full max-w-4xl p-4">
       <div className="mb-3 flex items-center justify-center">
-        <div className="flex gap-2 items-center relative">
+        <div className="relative flex items-center gap-2">
           <Button
             variant="player-ghost"
             size="icon"
-            className={`w-10 h-10 cursor-pointer ${showVolumeBar ? 'text-music-primary' : 'text-muted-foreground'}`}
+            className={`h-10 w-10 cursor-pointer ${showVolumeBar ? 'text-music-primary' : 'text-muted-foreground'}`}
             onClick={() => setShowVolumeBar(!showVolumeBar)}
           >
-            <Volume2 className="w-5 h-5" />
+            <Volume2 className="h-5 w-5" />
           </Button>
           <Button
             variant="player-ghost"
             size="icon"
-            className={`w-10 h-10 cursor-pointer ${isLoop ? 'text-music-primary' : 'text-muted-foreground'}`}
+            className={`h-10 w-10 cursor-pointer ${isLoop ? 'text-music-primary' : 'text-muted-foreground'}`}
             onClick={() => setIsLoop(!isLoop)}
           >
-            <Repeat className="w-5 h-5" />
+            <Repeat className="h-5 w-5" />
           </Button>
 
           {showVolumeBar && (
-            <div className="absolute top-8 z-10 right-0 bg-black/5 backdrop-blur-md border border-white/10 rounded-lg p-4 w-40">
+            <div className="absolute top-8 right-0 z-10 w-40 rounded-lg border border-white/10 bg-black/5 p-4 backdrop-blur-md">
               <div className="flex items-center gap-2">
                 <Slider
                   value={volume}
@@ -111,34 +109,34 @@ export const AudioPlayerCard: FC<AudioPlayerProps> = ({ src, title }) => {
         </div>
       </div>
 
-      <Card className="bg-black/5 backdrop-blur-xl mt-8 border-white/10 overflow-hidden">
-        <div className="p-2 space-y-1">
+      <Card className="mt-8 overflow-hidden border-white/10 bg-black/5 backdrop-blur-xl">
+        <div className="space-y-1 p-2">
           {src.map((_, idx) => (
             <div
               key={idx}
-              className="flex items-center justify-between px-4 py-[5px] rounded-lg hover:bg-white/5 transition-all duration-300 cursor-pointer"
+              className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-[5px] transition-all duration-300 hover:bg-white/5"
               onClick={() => playTrack(idx)}
             >
               <div className="flex items-center gap-3">
                 <Button
                   variant="player-ghost"
                   size="icon"
-                  className="w-8 h-8"
+                  className="h-8 w-8"
                   onClick={(e) => {
                     e.stopPropagation();
                     playTrack(idx);
                   }}
                 >
                   {currentTrack === idx && isPlaying ? (
-                    <Pause className="w-4 h-4" />
+                    <Pause className="h-4 w-4" />
                   ) : (
-                    <Play className="w-4 h-4 ml-0.5" />
+                    <Play className="ml-0.5 h-4 w-4" />
                   )}
                 </Button>
 
                 <h3
                   className={`font-medium transition-colors ${
-                    (currentTrack === idx && isPlaying) ? 'text-fuchsia-700' : 'text-foreground'
+                    currentTrack === idx && isPlaying ? 'text-fuchsia-700' : 'text-foreground'
                   }`}
                 >
                   {title[idx]}

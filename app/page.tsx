@@ -3,14 +3,12 @@ import Hero from '@/components/Hero';
 import { SafeRender } from '@/components/ToggleTheme';
 
 export default async function Home() {
-
   return (
     <div>
       <SafeRender>
         <Hero />
         <Footer />
       </SafeRender>
-
     </div>
   );
 }
