@@ -11,6 +11,7 @@ import { motion } from 'motion/react';
 import { Separator } from './ui/separator';
 import { useTheme } from 'next-themes';
 import { useQuery } from '@tanstack/react-query';
+import Spinner from './Spinner';
 
 const Hero = () => {
   const { catName, setCatName } = useCatname();
@@ -77,7 +78,7 @@ const Hero = () => {
             <p className="p-2 text-center text-[22px] font-medium lg:text-[30px]">
               Random Cat&apos;s
             </p>
-            {!isLoading && isSuccess && (
+            {!isLoading && isSuccess ? (
               <Image
                 alt=""
                 src={data[0].url}
@@ -87,6 +88,8 @@ const Hero = () => {
                 priority={true}
                 unoptimized={true}
               />
+            ) : (
+              <Spinner />
             )}
           </div>
           <div className="font-black lg:h-[500px]">
