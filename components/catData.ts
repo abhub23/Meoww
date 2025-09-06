@@ -21,8 +21,8 @@ export type CatPropTypes = {
 export const IndianDomesticShorthair: CatPropTypes = {
   name: 'Indian Domestic Shorthair',
   voice: {
-    'Come Here': 'Come Here',
-    No: 'No!',
+    'Come Here': '/meow.wav',
+    No: '/no.mp3',
     'Get Down': 'Get Down',
     'Good Kitty': 'Good Kitty',
     Stay: 'Stay',
@@ -31,7 +31,7 @@ export const IndianDomesticShorthair: CatPropTypes = {
     "What's That?": 'What’s That?',
     'Stop It': 'Stop It',
     'Come On': 'Come On',
-    'Pss-Pss-Pss': 'Pss-Pss-Pss',
+    'Pss-Pss-Pss': '/pss-pss.mp3',
     'Tsk-Tsk': 'Tsk-Tsk',
   },
 };
@@ -40,7 +40,7 @@ export const Persian: CatPropTypes = {
   name: 'Persian',
   voice: {
     'Come Here': '/meow.wav',
-    No: 'No!',
+    No: '/no.mp3',
     'Get Down': 'Get Down',
     'Good Kitty': 'Good Kitty',
     Stay: 'Stay',
@@ -49,7 +49,7 @@ export const Persian: CatPropTypes = {
     "What's That?": 'What’s That?',
     'Stop It': 'Stop It',
     'Come On': 'Come On',
-    'Pss-Pss-Pss': 'Pss-Pss-Pss',
+    'Pss-Pss-Pss': '/pss-pss.mp3',
     'Tsk-Tsk': 'Tsk-Tsk',
   },
 };
@@ -57,8 +57,8 @@ export const Persian: CatPropTypes = {
 export const Siamese: CatPropTypes = {
   name: 'Siamese',
   voice: {
-    'Come Here': 'Come Here',
-    No: 'No!',
+    'Come Here': '/meow.wav',
+    No: '/no.mp3',
     'Get Down': 'Get Down',
     'Good Kitty': 'Good Kitty',
     Stay: 'Stay',
@@ -67,7 +67,7 @@ export const Siamese: CatPropTypes = {
     "What's That?": 'What’s That?',
     'Stop It': 'Stop It',
     'Come On': 'Come On',
-    'Pss-Pss-Pss': 'Pss-Pss-Pss',
+    'Pss-Pss-Pss': '/pss-pss.mp3',
     'Tsk-Tsk': 'Tsk-Tsk',
   },
 };
@@ -75,8 +75,8 @@ export const Siamese: CatPropTypes = {
 export const Bengal: CatPropTypes = {
   name: 'Bengal',
   voice: {
-    'Come Here': 'Come Here',
-    No: 'No!',
+    'Come Here': '/meow.wav',
+    No: '/no.mp3',
     'Get Down': 'Get Down',
     'Good Kitty': 'Good Kitty',
     Stay: 'Stay',
@@ -85,7 +85,7 @@ export const Bengal: CatPropTypes = {
     "What's That?": 'What’s That?',
     'Stop It': 'Stop It',
     'Come On': 'Come On',
-    'Pss-Pss-Pss': 'Pss-Pss-Pss',
+    'Pss-Pss-Pss': '/pss-pss.mp3',
     'Tsk-Tsk': 'Tsk-Tsk',
   },
 };
@@ -93,8 +93,8 @@ export const Bengal: CatPropTypes = {
 export const Birman: CatPropTypes = {
   name: 'Birman',
   voice: {
-    'Come Here': 'Come Here',
-    No: 'No!',
+    'Come Here': '/meow.wav',
+    No: '/no.mp3',
     'Get Down': 'Get Down',
     'Good Kitty': 'Good Kitty',
     Stay: 'Stay',
@@ -103,7 +103,7 @@ export const Birman: CatPropTypes = {
     "What's That?": 'What’s That?',
     'Stop It': 'Stop It',
     'Come On': 'Come On',
-    'Pss-Pss-Pss': 'Pss-Pss-Pss',
+    'Pss-Pss-Pss': '/pss-pss.mp3',
     'Tsk-Tsk': 'Tsk-Tsk',
   },
 };
@@ -111,8 +111,8 @@ export const Birman: CatPropTypes = {
 export const MaineCoon: CatPropTypes = {
   name: 'Maine Coon',
   voice: {
-    'Come Here': 'Come Here',
-    No: 'No!',
+    'Come Here': '/meow.wav',
+    No: '/no.mp3',
     'Get Down': 'Get Down',
     'Good Kitty': 'Good Kitty',
     Stay: 'Stay',
@@ -121,7 +121,7 @@ export const MaineCoon: CatPropTypes = {
     "What's That?": 'What’s That?',
     'Stop It': 'Stop It',
     'Come On': 'Come On',
-    'Pss-Pss-Pss': 'Pss-Pss-Pss',
+    'Pss-Pss-Pss': '/pss-pss.mp3',
     'Tsk-Tsk': 'Tsk-Tsk',
   },
 };
@@ -129,8 +129,8 @@ export const MaineCoon: CatPropTypes = {
 export const BritishShorthair: CatPropTypes = {
   name: 'British Shorthair',
   voice: {
-    'Come Here': 'Come Here',
-    No: 'No!',
+    'Come Here': '/meow.wav',
+    No: '/no.mp3',
     'Get Down': 'Get Down',
     'Good Kitty': 'Good Kitty',
     Stay: 'Stay',
@@ -139,7 +139,7 @@ export const BritishShorthair: CatPropTypes = {
     "What's That?": 'What’s That?',
     'Stop It': 'Stop It',
     'Come On': 'Come On',
-    'Pss-Pss-Pss': 'Pss-Pss-Pss',
+    'Pss-Pss-Pss': '/pss-pss.mp3',
     'Tsk-Tsk': 'Tsk-Tsk',
   },
 };
@@ -147,8 +147,8 @@ export const BritishShorthair: CatPropTypes = {
 export const ExoticShorthair: CatPropTypes = {
   name: 'Exotic Shorthair',
   voice: {
-    'Come Here': 'Come Here',
-    No: 'No!',
+    'Come Here': '/meow.wav',
+    No: '/no.mp3',
     'Get Down': 'Get Down',
     'Good Kitty': 'Good Kitty',
     Stay: 'Stay',
@@ -157,7 +157,7 @@ export const ExoticShorthair: CatPropTypes = {
     "What's That?": 'What’s That?',
     'Stop It': 'Stop It',
     'Come On': 'Come On',
-    'Pss-Pss-Pss': 'Pss-Pss-Pss',
+    'Pss-Pss-Pss': '/pss-pss.mp3',
     'Tsk-Tsk': 'Tsk-Tsk',
   },
 };
@@ -165,8 +165,8 @@ export const ExoticShorthair: CatPropTypes = {
 export const ScottishFold: CatPropTypes = {
   name: 'Scottish Fold',
   voice: {
-    'Come Here': 'Come Here',
-    No: 'No!',
+    'Come Here': '/meow.wav',
+    No: '/no.mp3',
     'Get Down': 'Get Down',
     'Good Kitty': 'Good Kitty',
     Stay: 'Stay',
@@ -175,7 +175,7 @@ export const ScottishFold: CatPropTypes = {
     "What's That?": 'What’s That?',
     'Stop It': 'Stop It',
     'Come On': 'Come On',
-    'Pss-Pss-Pss': 'Pss-Pss-Pss',
+    'Pss-Pss-Pss': '/pss-pss.mp3',
     'Tsk-Tsk': 'Tsk-Tsk',
   },
 };
@@ -183,8 +183,8 @@ export const ScottishFold: CatPropTypes = {
 export const OrientalShorthair: CatPropTypes = {
   name: 'Oriental Shorthair',
   voice: {
-    'Come Here': 'Come Here',
-    No: 'No!',
+    'Come Here': '/meow.wav',
+    No: '/no.mp3',
     'Get Down': 'Get Down',
     'Good Kitty': 'Good Kitty',
     Stay: 'Stay',
@@ -193,7 +193,7 @@ export const OrientalShorthair: CatPropTypes = {
     "What's That?": 'What’s That?',
     'Stop It': 'Stop It',
     'Come On': 'Come On',
-    'Pss-Pss-Pss': 'Pss-Pss-Pss',
+    'Pss-Pss-Pss': '/pss-pss.mp3',
     'Tsk-Tsk': 'Tsk-Tsk',
   },
 };
