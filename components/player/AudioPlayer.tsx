@@ -11,7 +11,7 @@ interface AudioPlayerProps {
   title?: string;
 }
 
-export default function AudioPlayer({ src, title = 'Audio Track' }: AudioPlayerProps) {
+function AudioPlayer({ src, title = 'Audio Track' }: AudioPlayerProps) {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLooping, setIsLooping] = useState(false);
@@ -197,3 +197,5 @@ export default function AudioPlayer({ src, title = 'Audio Track' }: AudioPlayerP
     </Card>
   );
 }
+
+export default AudioPlayer;
